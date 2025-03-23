@@ -72,7 +72,7 @@ const getallstudent = async (req, res) => {
     }
 };
 
-// Add marks for a student
+// Add data for a student
 const addstudentmarks = async (req, res) => {
     try {
         const { student_id, subject, marks } = req.body;
@@ -87,7 +87,7 @@ const addstudentmarks = async (req, res) => {
     }
 };
 
-// Get marks of a single student
+// Get data of a single student
 const getstudentmarks = async (req, res) => {
     try {
         const { sid } = req.params;
@@ -99,7 +99,7 @@ const getstudentmarks = async (req, res) => {
     }
 };
 
-// Get marks of all students
+// Get data of all students
 const getallstudentmarks = async (req, res) => {
     try {
         const result = await db.query('SELECT * FROM marks');
